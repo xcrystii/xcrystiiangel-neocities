@@ -1,0 +1,195 @@
+#wrapper {
+    margin-top: 300px;
+}
+::-webkit-scrollbar {
+    width: 0; /* remove scrollbar space */
+    background: transparent; /* to make scrollbar invisible */
+}
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+@font-face {
+    font-family: oldschool;
+    src: url(https://dl.dropbox.com/scl/fi/h41dws5x4haw7zgw0yc1s/Px437_DOS-V_re_ANK24.ttf?rlkey=2b75apurgp4zrnd2xelqax6ru&st=gwq7wdnt&dl=0);
+}
+body {
+    background: url("bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+* {
+    cursor: url(https://cur.cursors-4u.net/smilies/smi-3/smi275.ani), 
+    url(https://cur.cursors-4u.net/smilies/smi-3/smi275.gif), 
+    auto !important;
+}
+.img {
+    width: 200px;
+    display: block;
+    margin: auto;
+    position: relative;
+    left: 184px;
+    top: -280px;
+}
+.border {
+    width: 320px;
+    height: 200px;
+    border-style: solid;
+    border-width: 10px;
+    border-image: url(border.gif) 8
+        fill round;
+    font-family: oldschool;
+    font-size: 20px;
+    margin: auto;
+    position: relative;
+}
+
+.desktop-icons {
+    font-family: oldschool;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 80px);
+    gap: 15px;
+    z-index: 0;
+}
+/* Desktop Icons */
+.desktop-icons {
+position: fixed;
+top: 20px;
+left: 20px;
+display: grid;
+grid-template-columns: repeat(2, 80px);
+gap: 15px;
+z-index: 0;
+}
+.desktop-icon {
+width: 80px;
+text-align: center;
+color: #fff;
+text-shadow: 1px 1px 0 #000;
+cursor: pointer;
+user-select: none;
+padding: 5px;
+}
+.desktop-icon:hover {
+background: rgba(0, 0, 128, 0.5);
+border: 1px dotted white;
+}
+.desktop-icon img {
+width: 40px;
+height: 40px;
+margin-bottom: 5px;
+filter: drop-shadow(2px 2px 0 #000);
+}
+.icon-label {
+font-size: 12px;
+word-break: break-word;
+}
+/* desktop grid2 */
+.desktop-icons2 {
+    font-family: oldschool;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 80px);
+    gap: 15px;
+    z-index: 0;
+}
+/* Desktop Icons2 */
+.desktop-icons2 {
+position: fixed;
+top: 20px;
+right: 30px;
+display: grid;
+grid-template-columns: repeat(1, 80px);
+gap: 15px;
+z-index: 0;
+}
+.desktop-icon2 {
+width: 80px;
+text-align: center;
+color: #fff;
+text-shadow: 1px 1px 0 #000;
+cursor: pointer;
+user-select: none;
+padding: 5px;
+}
+.desktop-icon2:hover {
+background: rgba(0, 0, 128, 0.5);
+border: 1px dotted white;
+}
+.desktop-icon2 img {
+width: 40px;
+height: 40px;
+margin-bottom: 5px;
+filter: drop-shadow(2px 2px 0 #000);
+}
+.icon-label2 {
+font-size: 12px;
+word-break: break-word;
+}
+
+.deco {
+    position: relative;
+    top: 5px;
+}
+.deco2 {
+    position: relative;
+    top: 5px;
+    width: 20px;
+}
+.app {
+    position: absolute;
+    top: 1%;
+    margin: 1%;
+}
+div2 {
+    padding: 1em;
+    padding-top: 1.2em;
+    position: relative;
+    left: 184px;
+    top: -260px;
+    display: block;
+    width: 300px;
+    height: 100px;
+}
+#msgs {
+    position: fixed;
+    bottom: 4px;
+    overflow: clip;
+}
+.item {
+    text-align: center;
+    width: 120px;
+    padding: 10px;
+    user-select: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.label {
+    font-family: oldschool;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    margin: 5px auto 0 auto;
+    max-width: 100%;
+    width: max-content;
+    text-align: center;
+    z-index: 1;
+}
+.media {
+    width: 375px;
+    height: 325px;
+    overflow: auto;
+    margin: 1px;
+}

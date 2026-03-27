@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/7.css">
+    <title>DRAWBOX</title>
+</head>
+
+<body>
+    <h1 style="font-family: oldschool; color: #4932c9;">.../DRAWBOX (. ❛ ᴗ ❛.)</h1>
+    <h3 style="font-family: oldschool; color: #4932c9;">NSFW and offensive content will be removed !</h3>
+    
+    <details style="text-indent: 20px;">
+        <summary style="font-family: oldschool; text-decoration: underline; color: #4932c9;">Help! I can't submit my drawing!</summary>
+        <p style="font-family: oldschool; color: #4932c9;">
+           if you're having trouble, <i><a href="https://forms.gle/TFUXRncW5CCe3kHbA" target="_blank">directly submit a form here.</a></i>
+        <br>Drawbox uses Imgur API, which may be blocked in your region. So, using a VPN also works!
+    <br> 
+    <br> <u>!!! REMEMBER TO SAVE YOUR DRAWING BEFORE PROCEEDING WITH THESE !!!</u></p>
+    </details>
+    <br>
+    <p style="font-family: oldschool; color: #4932c9;"><i><a href="https://xcrystiibox.nekoweb.org/" target="_blank">(click here for full screen)</a> <--- mobile reccomended</i></p>
+
+    <canvas id="drawboxcanvas" width="500" height="500"></canvas>
+    <br>
+    <div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
+    <div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
+    
+    <button onclick="Restore()">Undo</button>
+    <button onclick="Clear()">Clear</button>
+    
+    <input type="color" oninput="stroke_color = this.value">
+    <input type="range" min="1" max="100" oninput="stroke_width = this.value">
+    
+    <button id="submit" class="default">Submit drawing</button>
+    <p id="status" style="font-family: oldschool;"></p>
+
+	
+    <h1 style="font-family: oldschool; color: #4932c9;">Submitted Drawings <3</h1>
+    <div id="gallery" style="font-family: oldschool; color: #4932c9;">Loading images...</div>
+    
+    <style>
+        * {box-sizing: border-box;}
+        canvas {
+            border: 1px solid #4932c9;
+            cursor: crosshair;
+        }
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-container {
+            border: 1px solid #9087c4;
+            border-style: dashed;
+            padding: 5px;
+            max-width: 200px;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        input[type=range] {
+        width: auto;
+        }
+        @font-face {
+        font-family: oldschool;
+        src: url(https://dl.dropbox.com/scl/fi/h41dws5x4haw7zgw0yc1s/Px437_DOS-V_re_ANK24.ttf?rlkey=2b75apurgp4zrnd2xelqax6ru&st=gwq7wdnt&dl=0);
+        }
+        body {
+            background: url('NSO_bg.png');
+        }
+    </style>
+
+    <script src="drawbox.js"></script>
+
+</body>
+</html>
