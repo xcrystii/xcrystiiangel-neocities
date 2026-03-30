@@ -17,6 +17,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+a:hover {
+    font-style: italic;
+}
 * {
     cursor: url(https://cur.cursors-4u.net/smilies/smi-3/smi275.ani), 
     url(https://cur.cursors-4u.net/smilies/smi-3/smi275.gif), 
