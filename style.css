@@ -15,7 +15,7 @@
 body {
     background: url("imgs/bg.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 1920px 1080px;
 }
 a:hover {
     font-style: italic;
@@ -168,8 +168,7 @@ div2 {
 }
 #msgs {
     position: fixed;
-    bottom: 4px;
-    overflow: clip;
+    bottom: 5px;
 }
 .item {
     text-align: center;
