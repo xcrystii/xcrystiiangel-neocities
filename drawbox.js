@@ -176,6 +176,7 @@ async function fetchImages() {
 
       const timestamp = columns[0].trim();
       const imgUrl = columns[1].trim().replace(/"/g, "");
+      const comment =columns[2].trim().replace(/"/g, "");
 
       if (imgUrl.startsWith("http")) {
         const div = document.createElement("div");
@@ -184,6 +185,7 @@ async function fetchImages() {
         div.innerHTML = `
                     <img src="${imgUrl}" alt="drawing">
                     <p>${timestamp}</p>
+                    <p><details><summary>my comment: </summary>${comment}</details></p>
                 `;
         gallery.appendChild(div);
       }
