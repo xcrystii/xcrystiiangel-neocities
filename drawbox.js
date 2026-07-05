@@ -13,6 +13,7 @@
 */
 const GOOGLE_FORM_ID = "1FAIpQLScZjyhBMSMQjgA1Z_1C0JI37VIaTdShpxWjRCeUGQKWxRjfyA";
 const ENTRY_ID = "entry.1517898861";
+const NAME_ID = "entry.1374386702";
 const GOOGLE_SHEET_ID = "1H7XzSZTKWhPf5m-aYpBbKy68frVy5BVrtchDBq_cyKs";
 const DISPLAY_IMAGES = true;
 
@@ -36,6 +37,7 @@ let start_index = -1;
 let stroke_color = "black";
 let stroke_width = "2";
 let is_drawing = false;
+let user_name = "anonymous";
 
 function change_color(element) {
   stroke_color = element.style.background;
@@ -100,11 +102,15 @@ function Restore() {
 }
 
 function Clear() {
+
+  if (confirm("are you sure you want to clear? This can not be undone.") == true) {
   context.fillStyle = "white";
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.fillRect(0, 0, canvas.width, canvas.height);
   restore_array = [];
   start_index = -1;
+} else {
+}
 }
 
 context.drawImage = function() {
@@ -138,6 +144,7 @@ document.getElementById("submit").addEventListener("click", async function () {
 
     const googleFormData = new FormData();
     googleFormData.append(ENTRY_ID, imageUrl);
+    googleFormData.append(NAME_ID,user_name);
 
     await fetch(GOOGLE_FORM_URL, {
       method: "POST",
@@ -176,7 +183,8 @@ async function fetchImages() {
 
       const timestamp = columns[0].trim();
       const imgUrl = columns[1].trim().replace(/"/g, "");
-      const comment =columns[2].trim().replace(/"/g, "");
+      const artist = columns[2].trim().replace(/"/g, "");
+      const myComment = columns[3].trim().replace(/"/g, "");
 
       if (imgUrl.startsWith("http")) {
         const div = document.createElement("div");
@@ -185,7 +193,11 @@ async function fetchImages() {
         div.innerHTML = `
                     <img src="${imgUrl}" alt="drawing">
                     <p>${timestamp}</p>
-                    <p><details><summary>my comment: </summary>${comment}</details></p>
+                    <p>artist: ${artist}</p>
+                    <details>
+                    <summary>my comment:</summary>
+                    <p>${myComment}</p>
+                    </details>
                 `;
         gallery.appendChild(div);
       }
