@@ -5,5 +5,121 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>I MET LEONSBU !!!!!</p>
+    <div id="container">
+        <img src="imgs/firetext.gif">
+        <p>as if i wasn't annoying enough about this, i made an entirely new subpage dedicated to THIS!!! MOMENT!!!!!
+            becauz spamming on Twitter Dot Com jus doesnt give any1 the full story ab this [and ill also in the risk of being flagged AGAIN]. 
+            anyways this page is relly just an archive for me to 
+            look back on LMFAAOOOO but i still want Every person on the internet to know. so . yeah. haha.
+        </p>
+        <img class="ss" src="imgs/ss1.webp" id="img1" onclick="change(this)">
+        <p>
+            on 31/03/2026, the last day of TwitchCon, Leon announced that he was going to hold a meetup at 12:30 my time <div class=""></div>
+        </p>
+        <p>
+            I love fruitcake I love shortbread apple pie dessert cupcake I love macaroon. Pastry apple pie jelly-o dessert tiramisu jelly-o. Pastry ice cream I love ice cream gummies pastry.
+        </p>
+</div>
+
+    <style>
+        body {
+    background: url("imgs/snow.png") no-repeat;
+    background-size: cover;
+    margin: 69px;
+    }
+        #container {
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: oldschool;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+    }
+        #container::-webkit-scrollbar {
+    width: 0; /* remove scrollbar space */
+    background: transparent; /* to make scrollbar invisible */
+    }
+        #container::-webkit-scrollbar-thumb {
+    background: transparent;
+    }
+        .fullsize {
+    max-width: 100%;
+    z-index: 5;
+    }
+        .ss {
+    width: 30%;
+    }
+        p {
+    text-indent: 3em;
+    }
+    </style>
+
+<script>
+var b = document.documentElement;
+var imgurl = "imgs/teenyleon.png";
+var size = [10, 20];
+function rand(min, max)
+{
+return Math.floor(Math.random() * (max - min + 1) + min)
+}
+function getSize()
+{
+return rand(size[0], size[1]);
+}
+function lerp(a,b,f)
+{
+return (b-a)*f+a;
+}
+function heart(x,y)
+{
+var s = getSize();
+x -= s/2;
+y -= s/2;
+x = Math.floor(x) + rand(-5, 5);
+y = Math.floor(y) + rand(-5, 5);
+var fx = x + rand(-40, 40);
+var fy = y + rand(-40, 40);
+var i = document.createElement("img");
+i.src = imgurl;
+i.style = `pointer-events: none; position: fixed; width: ${s}px; left: ${x}px; top: ${y}px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; z-index: 1000000;`;
+b.appendChild(i);
+var f = 0;
+var interval;
+interval = setInterval(function() {
+var _x = Math.floor(lerp(x, fx, f));
+var _y = Math.floor(lerp(y, fy, f));
+i.style = `pointer-events: none; position: fixed; width: ${s}px; left: ${_x}px; top: ${_y}px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; z-index: 1000000;`;
+i.style.opacity = 1-f;
+f += 0.01;
+if (f > 1)
+{
+clearInterval(interval);
+b.removeChild(i);
+}
+}, 10);
+}
+function bro(x,y)
+{
+for (var i = 0; i < 5; i++)
+{
+heart(x,y);
+}
+}
+b.addEventListener("click", function(event){
+var x = event.clientX;
+var y = event.clientY;
+bro(x,y);
+});
+
+  </script>
+
+<script>
+    function change(element) {
+        element.classList.toggle("fullsize");
+    }
+</script>
+
 </body>

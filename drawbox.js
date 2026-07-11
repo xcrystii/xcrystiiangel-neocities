@@ -103,7 +103,7 @@ function Restore() {
 
 function Clear() {
 
-  if (confirm("are you sure you want to clear? This can not be undone.") == true) {
+  if (confirm("are you sure you want to clear? everything will be gone FOREVER!") == true) {
   context.fillStyle = "white";
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.fillRect(0, 0, canvas.width, canvas.height);
@@ -116,6 +116,19 @@ function Clear() {
 context.drawImage = function() {
 	console.warn("noo >:(");
 };
+
+// Setup download button event listener - code by https://stackoverflow.com/users/1708282/huw WOOWOOOWOO TY
+document.querySelector('#download').addEventListener('click', ()=> {
+  var canvas = document.querySelector("#drawboxcanvas");
+  var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+  
+  var element = document.createElement('a');
+  var filename = 'drawbox.png';
+  element.setAttribute('href', image);
+  element.setAttribute('download', filename);
+
+  element.click();
+})
 
 document.getElementById("submit").addEventListener("click", async function () {
   const submitButton = document.getElementById("submit");
