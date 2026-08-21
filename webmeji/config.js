@@ -31,7 +31,7 @@ window.SHIMEJI_CONFIG = {
   // movement and physics -------------------------------------------
   // values are pixels movements per frame
   walkspeed: 50,
-  fallspeed: 200,
+  fallspeed: 300,
   jumpspeed: 150,
 
   // time in ms before standing back up after falling

@@ -30,7 +30,7 @@
             
         </p>  
     </div>
-    <img class="heart" src="imgs/leonsbu my beloved.png">
+    <img id="heart" class="zoom" src="imgs/leonsbu my beloved.png">
 
 
     <style>
@@ -89,15 +89,21 @@
         p {
     text-indent: 3em;
     }
-        .heart {
+        #heart {
     position: relative;
     max-width: 15rem;
     top: -4rem;
-    right: 2rem;
+    right: 1.5rem;
     width: 40%;
     -webkit-filter: drop-shadow(5px 5px 5px #7e7e7e);
     filter: drop-shadow(5px 5px 5px #7e7e7e);
+    transition: transform .5s;
     }
+        .zoom:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+    } 
     </style>
 
 <script>
