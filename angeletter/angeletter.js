@@ -15,7 +15,7 @@
 ⢄⡻⠄⠐⠄⠀⠀⠀⠀⠀⠠⣀⠃⠁⠀⠃⠈⠀⠀⢀⡘⠉⠉⣋⢕⡒⣀⠔⠁⡌⡆⠠⠀⡁⠀⠀⠈⠈⣢⠐⠆⠁⠀⠀⠀
 ⢂⠳⡇⠀⠀⠀⠀⠀⡀⠠⠀⠁⠀⠀⠐⠀⠀⠀⢀⢃⠪⣑⡄⠢⢝⡖⢁⠒⠨⠌⠃⠠⠠⠇⠀⠀⠀⠲⠤⣋⡀⠀⠀⠀⠀
 ⡌⡜⡅⠀⠀⠀⣠⡚⠁⠀⠀⠀⠀⠀⡄⠀⡀⢀⠀⠀⢃⠆⣸⡀⠀⠇⠀⠈⠱⠈⡔⡒⡀⢑⢀⢪⠔⡙⠀⠠⠓⠀⠀⠀⠀
-i have no fucking idea what im doing
+i have no fucking idea what im doing.
 */
 const GOOGLE_FORM_ID = "1FAIpQLSeOkg2F_NyPjeJBdRqEF_tLsJmCnvH6JrcYS8LPYXij9uwGNA";
 const ENTRY_ID = "entry.2144241403";
